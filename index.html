@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz App</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <style>
+.subtitle {
+  font-family: Cursive;
+  font-size: 1.3rem;
+  font-style: cursive;
+  font-weight: bold;
+  text-align: center;
+
+  margin-top: 10px;
+  margin-bottom: 20px;
+  padding: 12px 18px;
+  border-radius: 12px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.subtitle:hover {
+  transform: scale(1.02);
+}
+
+  </style>
+</head>
+<body>
+  <header class="main-header">
+    <h1>📚 Choisissez un Quiz</h1>
+    <p class="subtitle">Testez vos connaissances et progressez chaque jour ✨</p>
+  </header>
+
+  <div id="quiz-list">
+    <!-- Les quiz seront générés ici dynamiquement -->
+  </div>
+
+  <!-- Bouton flottant -->
+  <button onclick="window.location.href='history.html'" class="btn-history-floating">📜</button>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../assets/js/main.js"></script>
+</body>
+</html>

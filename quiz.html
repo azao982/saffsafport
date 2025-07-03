@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Quiz</title>
+  <link rel="stylesheet" href="../assets/css/styles.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="quiz-wrapper">
+    <h1 class="quiz-title">🧠 Répondez au Quiz</h1>
+
+    <div id="quiz-container">
+      <div id="progress" class="progress-indicator">Question 1/5</div><br>
+
+      <div id="question-title" class="question-title">Chargement...</div><br>
+
+      <div id="choices" class="choices-container"></div><br>
+
+      <div style="display: flex; justify-content: space-between; align-items: center;">
+        <button id="home-btn" class="btn-home">🏠 Accueil</button>
+      </div>
+
+      <div id="score-container" class="score-container" style="display: none;"></div>
+    </div>
+  </div>
+
+  <script src="../assets/js/data.js"></script>
+  <script src="../utils/storage.js"></script>
+  <script src="../assets/js/quiz.js"></script>
+</body>
+</html>

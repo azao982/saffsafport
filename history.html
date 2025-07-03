@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Historique</title>
+  
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&family=Quicksand:wght@400;600&display=swap" rel="stylesheet">
+  
+  <!-- FontAwesome -->
+  <script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+  <style>
+    body {
+      margin: 0;
+      font-family:cursive;
+      background: linear-gradient(135deg, #e6f0ff, #ffffff);
+      padding: 40px 20px;
+      color: #333;
+    }
+
+    h2 {
+      font-family:cursive;
+      font-size: 2.5em;
+      color: #437992;
+      text-align: center;
+      margin-bottom: 40px;
+      animation: fadeInDown 0.8s ease-out;
+    }
+
+    #history-container {
+      max-width: 800px;
+      margin: auto;
+    }
+
+    .history-item {
+      background: #ffffff;
+      border-radius: 15px;
+      padding: 20px;
+      margin-bottom: 20px;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
+      position: relative;
+      overflow: hidden;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+      animation: fadeInUp 0.5s ease both;
+    }
+
+    .history-item::before {
+      content: '';
+      position: absolute;
+      top: -50%;
+      left: -50%;
+      width: 200%;
+      height: 200%;
+      background: radial-gradient(circle at center, rgba(255, 255, 255, 0.3), transparent 70%);
+      animation: rotateLight 4s linear infinite;
+      z-index: 0;
+    }
+
+    .history-item > * {
+      position: relative;
+      z-index: 1;
+    }
+
+    .history-item:hover {
+      transform: scale(1.02);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .history-title {
+      font-family:cursive;
+      font-size: 1.3rem;
+      color: #5b9bd5;
+      margin-bottom: 10px;
+    }
+
+    .history-score {
+      font-weight: bold;
+      color: #28a745;
+      font-size: 1.1em;
+    }
+
+    .history-message {
+      font-style: italic;
+      color: #666;
+      margin-top: 8px;
+    }
+
+    .btn-back {
+      display: block;
+      width: fit-content;
+      margin: 40px auto 0;
+      padding: 12px 25px;
+      background: linear-gradient(to right, #007bff, #3399ff);
+      color: white;
+      text-decoration: none;
+      border-radius: 25px;
+      font-weight: bold;
+      font-family: cursive;
+      font-size: 1rem;
+      box-shadow: 0 4px 10px rgba(0, 123, 255, 0.4);
+      transition: transform 0.2s ease, box-shadow 0.3s ease;
+    }
+
+    .btn-back:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 6px 14px rgba(0, 123, 255, 0.5);
+    }
+
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(20px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes fadeInDown {
+      from { opacity: 0; transform: translateY(-30px); }
+      to { opacity: 1; transform: translateY(0); }
+    }
+
+    @keyframes rotateLight {
+      0% { transform: rotate(0deg); }
+      100% { transform: rotate(360deg); }
+    }
+  </style>
+</head>
+
+<body>
+
+  <h2><i class="fas fa-history"></i> Mes Historiques</h2>
+
+  <div id="history-container">
+    <!-- Exemple d’élément (à dupliquer dynamiquement) -->
+    
+    <!-- Ajout dynamique dans le JS -->
+  </div>
+
+  <a href="index.html" class="btn-back"><i class="fas fa-arrow-left"></i> Retour</a>
+
+  <!-- Script JS -->
+  <script src="../assets/js/history.js"></script>
+
+</body>
+</html>
